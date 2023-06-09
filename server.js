@@ -7,13 +7,18 @@ app.get("/", (req, res) => {
     res.send("Welcome to the Gitpub App!");
 });
 
+// Index Route
 app.get("/drinks", (req, res) => {
     res.render("index.ejs", {drinks});
 });
 
+// Show Route
 app.get("/drinks/:id", (req, res) => {
-    res.send(req.params.id);
-})
+    const id = req.params.id;
+    const drink = drinks[id];
+    // res.send(req.params.id)
+    res.render("show.ejs", {drink});
+});
 
 
 app.listen(3000, ()=> {
