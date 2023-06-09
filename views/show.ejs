@@ -8,16 +8,40 @@
 </head>
 <body>
 
-    <h1>At foo bar</h1>
+    <h1><b>At foo bar</b></h1>
 
-    <h2>name: <%= drink.name %></h2>
+    <h2>Name: <%= drink.name %></h2>
 
     <img src="<%= drink.image + '.png' %>" alt="Drink Image">
 
-    <h3>price: <%= drink.price %></h3>
+    <h3>Price: <%= drink.price %></h3>
 
     <h4><a href="/drinks">Go back</a></h4>
 
+    <style>
+        body{
+            background-color: rgb(106, 56, 20);
+        }
+
+        h1, h2, h3, a {
+            color:rgb(243, 239, 235); 
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 100;
+        }
+
+        a {
+            color:rgb(220, 207, 25);
+            font-family: 'Courier New', Courier, monospace;
+            
+        }
+
+        img {
+            height: 300px;
+            width: auto;
+            
+        }
+
+    </style>
 
 </body>
 </html>

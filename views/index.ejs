@@ -22,9 +22,6 @@
 
             <% const joinName = splitName.join(" ") %>
             
-            <% drinks.forEach((drink, index) => { %> 
-
-            <% }) %>
 
             <li><a href="/drinks/<%= i %>"><%= joinName %></a></li>
         
@@ -39,18 +36,26 @@
             background-color: rgb(106, 56, 20);
         }
 
-        h1 {
+        h1, a {
             color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h1 {
+            font-weight:bold;
         }
 
         li {
             list-style: none;
+            margin: 3px;
+                :hover {
+                    color: rgb(245, 238, 153);
+                    font-style: italic;
+                
+                }
         }
 
-        a {
-            color: white;
-        }
-
+    
     </style>
 
 </body>
