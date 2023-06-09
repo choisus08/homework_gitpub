@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/drinks", (req, res) => {
-    res.render("index.ejs", [drinks]);
+    res.render("index.ejs", {drinks});
 })
 
 

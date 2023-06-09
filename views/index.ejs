@@ -9,13 +9,42 @@
 <body>
 
     <h1>Welcome to gitPub</h1>
+
+    <ul>
+        <% for (let i=0; i<drinks.length; i++) { %>
+
+            <% const drinkName = drinks[i].name %>
+            <% const splitName = drinkName.split(" ") %>
+
+            <% for (let j=0; j<splitName.length; j++)  { %>
+                <% splitName[j] = splitName[j].charAt(0).toUpperCase() + splitName[j].slice(1) %>
+                <% } %>
+
+            <% const joinName = splitName.join(" ") %>
+ 
+            <li><a href="/drinks/<%= i %>"><%= joinName %></a></li>
+        
+            
+        <% } %>
+
+    </ul>
     
+
+
     <style>
         body {
             background-color: rgb(106, 56, 20);
         }
 
         h1 {
+            color: white;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
             color: white;
         }
 
