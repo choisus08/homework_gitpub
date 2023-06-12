@@ -10,25 +10,25 @@
 
     <h1>Welcome to gitPub</h1>
 
-    <ul>
-        <% for (let i=0; i<drinks.length; i++) { %>
+    <h2>Drink Menu</h2>
 
-            <% const drinkName = drinks[i].name %>
-            <% const splitName = drinkName.split(" ") %>
+        <ul>
+            <% for (let i=0; i<drinks.length; i++) { %>
 
-            <% for (let j=0; j<splitName.length; j++)  { %>
-                <% splitName[j] = splitName[j].charAt(0).toUpperCase() + splitName[j].slice(1) %>
-                <% } %>
+                <% const drinkName = drinks[i].name %>
+                <% const splitName = drinkName.split(" ") %>
 
-            <% const joinName = splitName.join(" ") %>
+                <% for (let j=0; j<splitName.length; j++)  { %>
+                    <% splitName[j] = splitName[j].charAt(0).toUpperCase() + splitName[j].slice(1) %>
+                    <% } %>
+
+                <% const joinName = splitName.join(" ") %>
             
 
-            <li><a href="/drinks/<%= i %>"><%= joinName %></a></li>
+                <li><a href="/drinks/<%= i %>"><%= joinName %></a></li>
         
-        <% } %>
-
-    </ul>
-    
+            <% } %>
+        </ul>
 
 
     <style>
@@ -36,7 +36,7 @@
             background-color: rgb(106, 56, 20);
         }
 
-        h1, a {
+        h1, h2, a {
             color: white;
             font-family: 'Courier New', Courier, monospace;
         }
