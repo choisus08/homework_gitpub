@@ -30,6 +30,27 @@
             <% } %>
         </ul>
 
+        <h2>Food Menu</h2>
+
+        <ul>
+            <% for (let i=0; i<food.length; i++) { %>
+
+                <% const foodName = food[i].name %>
+                <% const splitName = foodName.split(" ") %>
+
+                <% for (let j=0; j<splitName.length; j++)  { %>
+                    <% splitName[j] = splitName[j].charAt(0).toUpperCase() + splitName[j].slice(1) %>
+                    <% } %>
+
+                <% const joinName = splitName.join(" ") %>
+            
+
+                <li><a href="/food/<%= i %>"><%= joinName %></a></li>
+        
+            <% } %>
+        </ul>
+
+
 
     <style>
         body {
